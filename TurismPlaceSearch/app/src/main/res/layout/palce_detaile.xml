@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/formatted_place_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="formatted_place_name"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/formatted_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="formatted_address"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="type"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:textSize="25sp"/>
+            <TextView
+                android:id="@+id/formatted_phn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="formatted_phn"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:textSize="25sp"/>
+            <TextView
+                android:id="@+id/weekday_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="weekday_text"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:id="@+id/web"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="web"
+                android:padding="10dp"
+                android:textSize="25sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
