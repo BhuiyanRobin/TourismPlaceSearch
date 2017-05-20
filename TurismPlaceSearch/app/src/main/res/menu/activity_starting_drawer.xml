@@ -41,7 +41,7 @@
         <item
             android:id="@+id/nav_add_travel_moment"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="View Travel Moment" />
+            android:title="Add Travel Moment" />
         <item
             android:id="@+id/nav_my_add_travel_moment"
             android:icon="@drawable/ic_menu_slideshow"

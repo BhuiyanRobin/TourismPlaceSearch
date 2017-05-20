@@ -221,7 +221,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             for (Object search : selectedSearchCat){searchInput =  search +"|"+searchInput;}
                             try {addresses = geocoder.getFromLocationName(placeName,1);
                             } catch (IOException e) {e.printStackTrace();}
-                            nearByPlacessChangableUrl = "maps/api/place/nearbysearch/json?location="+addresses.get(0).getLatitude()+","+addresses.get(0).getLongitude()+"&radius=500&types="+searchInput+"&key=AIzaSyC35ucq8CaVii5htoOZV2wL1wM_CX7WyYM";
+                            nearByPlacessChangableUrl = "maps/api/place/nearbysearch/json?location="+addresses.get(0).getLatitude()+","+addresses.get(0).getLongitude()+"&radius=500&types="+searchInput+"&key=AIzaSyA86QNyhvPXHJ89jhueKUbjhnmF5hrIwbQ";
                             getNearbyPlaceData();
 
                         }
@@ -244,7 +244,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                             int index = nearbyPlacessName.indexOf(chosenPlace);
                             narebyPlaceId = nearbyPlacesId.get(index);
-                            detailePlacesChangableUrl = "maps/api/place/details/json?placeid="+narebyPlaceId+"&key=AIzaSyC35ucq8CaVii5htoOZV2wL1wM_CX7WyYM";
+                            detailePlacesChangableUrl = "maps/api/place/details/json?placeid="+narebyPlaceId+"&key=AIzaSyA86QNyhvPXHJ89jhueKUbjhnmF5hrIwbQ";
                             getPlaceDetaileData();
                             //region init
                              formatted_place_nameTv = (TextView) dialogView.findViewById(R.id.formatted_place_name);

@@ -21,9 +21,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.nocturnal.Fragment.AddTravelEvent;
+import com.example.nocturnal.Fragment.AddTravelExpense;
+import com.example.nocturnal.Fragment.AddTravelMoment;
 import com.example.nocturnal.Fragment.FragmentLogin;
 import com.example.nocturnal.Fragment.RegisterFragment;
 import com.example.nocturnal.Fragment.TravelEventList;
+import com.example.nocturnal.Fragment.TravelExpenseList;
 import com.example.nocturnal.Model.Register;
 import com.example.nocturnal.PreferedShare.LogInPref;
 import com.example.nocturnal.placesearch.MapsActivity;
@@ -90,11 +93,13 @@ public class StartingActivity extends AppCompatActivity
     }
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
+        int count = getFragmentManager().getBackStackEntryCount();
+
+        if (count == 0) {
             super.onBackPressed();
+            //additional code
+        } else {
+            getFragmentManager().popBackStack();
         }
     }
 
@@ -163,6 +168,27 @@ public class StartingActivity extends AppCompatActivity
             TravelEventList event = new TravelEventList();
             ft.replace(R.id.SetFragment, event,"MyTravelEvents");
             ft.commit();
+        }
+        else if(id==R.id.nav_my_add_travel_Expense)
+        {
+            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+            AddTravelExpense expense = new AddTravelExpense();
+            ft.replace(R.id.SetFragment, expense,"AddTravelEvent");
+            ft.commit();
+        }
+        else if (id==R.id.nav_add_travel_moment)
+        {
+            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+            AddTravelMoment moment = new AddTravelMoment();
+            ft.replace(R.id.SetFragment, moment,"AddTravelMoment");
+            ft.commit();
+        }
+        else if(id==R.id.nav_my_view_travel_Expense){
+            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+            TravelExpenseList expenseList = new TravelExpenseList();
+            ft.replace(R.id.SetFragment, expenseList,"AddTravelMoment");
+            ft.commit();
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

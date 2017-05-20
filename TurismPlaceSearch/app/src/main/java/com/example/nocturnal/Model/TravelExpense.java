@@ -8,18 +8,18 @@ public class TravelExpense {
     private String expenseDetail;
     private double expenseCost;
     private String travelId;
-
-    public TravelExpense(String expenseDetail, double expenseCost, String travelId) {
-        this.expenseDetail = expenseDetail;
-        this.expenseCost = expenseCost;
-        this.travelId = travelId;
-    }
-
+    private String id;
     public TravelExpense() {
     }
 
-    public String getExpenseDetail() {
+    public TravelExpense(String expenseDetail, double expenseCost, String travelId, String id) {
+        this.expenseDetail = expenseDetail;
+        this.expenseCost = expenseCost;
+        this.travelId = travelId;
+        this.id = id;
+    }
 
+    public String getExpenseDetail() {
         return expenseDetail;
     }
 
@@ -41,5 +41,13 @@ public class TravelExpense {
 
     public void setTravelId(String travelId) {
         this.travelId = travelId;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
