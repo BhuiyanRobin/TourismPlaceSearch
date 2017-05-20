@@ -12,41 +12,40 @@ import java.util.ArrayList;
  * Created by bhuiy on 5/20/2017.
  */
 
-public class TravelEventService {
+public class TravelMomentRepository {
     DatabaseReference database;
-    public static ArrayList<TravelEvent> events;
-    public TravelEventService()
+    public static ArrayList<TravelMoment> moments;
+    public TravelMomentRepository()
     {
-        database= FirebaseDatabase.getInstance().getReference("TravelEvent");
-        events=new ArrayList<>();
+        database= FirebaseDatabase.getInstance().getReference("TravelMoment");
+        moments=new ArrayList<>();
     }
-    public boolean Save(TravelEvent event)
+    public boolean Save(TravelMoment moment)
     {
-        database.push().setValue(event);
+        database.push().setValue(moment);
         return true;
     }
-    public boolean Update(TravelEvent event)
-    {
-        return true;
-    }
-    public boolean Delete(String key)
+    public boolean Update(TravelMoment moment)
     {
         return true;
     }
-    public TravelEvent GetTravelEvent()
+    public boolean Delete(TravelMoment moment)
     {
-        return new TravelEvent();
+        return true;
     }
-    public void AllEvents()
+    public TravelMoment GetById(String id){
+        return new TravelMoment();
+    }
+    public void AllTravelMoment()
     {
         database= FirebaseDatabase.getInstance().getReference().child("TravelEvent");
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot data:dataSnapshot.getChildren()) {
-                    TravelEvent travelEvent=data.getValue(TravelEvent.class);
-                    travelEvent.setId(data.getKey());
-                    events.add(travelEvent);
+                    TravelMoment moment=data.getValue(TravelMoment.class);
+                    moment.setId(data.getKey());
+                    moments.add(moment);
                 }
             }
 

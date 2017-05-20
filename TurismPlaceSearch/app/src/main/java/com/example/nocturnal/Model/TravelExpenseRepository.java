@@ -12,41 +12,40 @@ import java.util.ArrayList;
  * Created by bhuiy on 5/20/2017.
  */
 
-public class TravelEventService {
+public class TravelExpenseRepository {
     DatabaseReference database;
-    public static ArrayList<TravelEvent> events;
-    public TravelEventService()
+    public static ArrayList<TravelExpense>expenses;
+    public TravelExpenseRepository()
     {
-        database= FirebaseDatabase.getInstance().getReference("TravelEvent");
-        events=new ArrayList<>();
+        database= FirebaseDatabase.getInstance().getReference("TravelExpense");
+        expenses=new ArrayList<>();
     }
-    public boolean Save(TravelEvent event)
+    public boolean Save(TravelExpense travelExpense)
     {
-        database.push().setValue(event);
+        database.push().setValue(travelExpense);
         return true;
     }
-    public boolean Update(TravelEvent event)
-    {
-        return true;
-    }
-    public boolean Delete(String key)
+    public boolean Update(TravelEvent travelEvent)
     {
         return true;
     }
-    public TravelEvent GetTravelEvent()
+    public boolean Delete(TravelExpense travelExpense)
     {
+        return true;
+    }
+    public TravelEvent GetById(String id){
         return new TravelEvent();
     }
-    public void AllEvents()
+    public void AlltravelExpense()
     {
         database= FirebaseDatabase.getInstance().getReference().child("TravelEvent");
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot data:dataSnapshot.getChildren()) {
-                    TravelEvent travelEvent=data.getValue(TravelEvent.class);
-                    travelEvent.setId(data.getKey());
-                    events.add(travelEvent);
+                    TravelExpense expense=data.getValue(TravelExpense.class);
+                    expense.setId(data.getKey());
+                    expenses.add(expense);
                 }
             }
 

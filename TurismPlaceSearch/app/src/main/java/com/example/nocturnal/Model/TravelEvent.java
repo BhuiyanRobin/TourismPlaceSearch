@@ -10,17 +10,18 @@ public class TravelEvent {
     private String fromDate;
     private String toDate;
     private String userId;
+    public String id;
 
-    public TravelEvent() {
-
-    }
-
-    public TravelEvent(String destination, double budget, String fromDate, String toDate, String userId) {
+    public TravelEvent(String destination, double budget, String fromDate, String toDate, String userId, String id) {
         this.destination = destination;
         this.budget = budget;
         this.fromDate = fromDate;
         this.toDate = toDate;
         this.userId = userId;
+        this.id = id;
+    }
+
+    public TravelEvent() {
     }
 
     public String getDestination() {
@@ -61,5 +62,13 @@ public class TravelEvent {
 
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
