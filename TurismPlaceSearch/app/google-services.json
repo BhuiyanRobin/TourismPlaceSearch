@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "340378755162",
+    "firebase_url": "https://toursimplacesearch.firebaseio.com",
+    "project_id": "toursimplacesearch",
+    "storage_bucket": "toursimplacesearch.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:340378755162:android:caaf327cd7e808ab",
+        "android_client_info": {
+          "package_name": "com.example.nocturnal.placesearch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "340378755162-pct5duvq9bitkepvlu466hvcjctb40hl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcbejJkMytZdFzFjPd_CIFSB9W_4rF2zQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

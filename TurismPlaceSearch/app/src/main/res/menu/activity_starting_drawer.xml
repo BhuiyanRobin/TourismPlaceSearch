@@ -11,9 +11,41 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="Weather Update" />
         <item
-            android:id="@+id/public_travel_event"
+            android:id="@+id/nav_Register"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Public Travel Event" />
+            android:title="Register" />
+        <item
+            android:id="@+id/nav_LogIn"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Log In" />
+        <item
+            android:id="@+id/nav_LogOut"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Log Out" />
+        <item
+            android:id="@+id/nav_travel_event"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Add Travel Event" />
+        <item
+            android:id="@+id/nav_my_travel_event"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="My travel events" />
+        <item
+            android:id="@+id/nav_my_add_travel_Expense"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Add Travel Expense" />
+        <item
+            android:id="@+id/nav_my_view_travel_Expense"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="View Travel Expense" />
+        <item
+            android:id="@+id/nav_add_travel_moment"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="View Travel Moment" />
+        <item
+            android:id="@+id/nav_my_add_travel_moment"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="View Travel Moment" />
     </group>
 
     <item android:title="Communicate">

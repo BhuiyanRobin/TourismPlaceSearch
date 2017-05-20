@@ -1,0 +1,89 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        >
+        <RelativeLayout
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/Show_Destination"
+                android:text="Rangamati"
+                android:textSize="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From Date :"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/Show_Destination"
+                android:id="@+id/fromtv"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1-12-2017"
+                android:textSize="18dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/fromtv"
+                android:id="@+id/Show_FromDate"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To Date:"
+                android:id="@+id/totv"
+                android:layout_below="@+id/Show_Destination"
+
+                android:layout_alignStart="@+id/Show_Todate"
+                android:textSize="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2-10-2015"
+
+                android:id="@+id/Show_Todate"
+                android:layout_below="@+id/totv"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="22dp"
+                android:textSize="18dp"
+                />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/Show_Todate"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estimated Budget : "
+                    android:id="@+id/ed_tv"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1000 Tk"
+                    android:id="@+id/Show_Budget"
+                    android:layout_toRightOf="@+id/ed_tv"
+                    android:layout_toEndOf="@+id/ed_tv"
+                    android:textSize="20dp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</layout>

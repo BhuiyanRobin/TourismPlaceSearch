@@ -29,7 +29,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="AIzaSyA86QNyhvPXHJ89jhueKUbjhnmF5hrIwbQ" />
 
         <activity
             android:name=".MapsActivity"
@@ -37,7 +37,7 @@
             
         </activity>
         <activity
-            android:name=".StartingActivity"
+            android:name="com.example.nocturnal.Activity.StartingActivity"
             android:label="@string/title_activity_starting"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
