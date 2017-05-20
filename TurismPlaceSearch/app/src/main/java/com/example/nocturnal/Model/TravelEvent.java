@@ -1,5 +1,7 @@
 package com.example.nocturnal.Model;
 
+import java.util.ArrayList;
+
 /**
  * Created by bhuiy on 5/17/2017.
  */
@@ -61,5 +63,17 @@ public class TravelEvent {
 
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    public ArrayList<TravelEvent> getAllInfo(){
+        ArrayList<TravelEvent> travelEvents = new ArrayList<>();
+
+        travelEvents.add(new TravelEvent("aghdvasd",10.00,"maha","kaha","2"));
+        travelEvents.add(new TravelEvent("aghdvasd",10.00,"maha","kaha","2"));
+        travelEvents.add(new TravelEvent("aghdvasd",10.00,"maha","kaha","2"));
+        travelEvents.add(new TravelEvent("aghdvasd",10.00,"maha","kaha","2"));
+        travelEvents.add(new TravelEvent("aghdvasd",10.00,"maha","kaha","2"));
+
+        return travelEvents;
     }
 }

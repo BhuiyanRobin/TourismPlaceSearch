@@ -29,7 +29,6 @@ public class TravelListViewAdapter extends RecyclerView.Adapter<TravelListViewAd
         this.context=context;
         events.add(new TravelEvent("Dhaka",100,"2012-2-10","2015-2-2","1"));
         events.add(new TravelEvent("Comilla",100,"2012-2-10","2015-2-2","1"));
-
     }
     @Override
     public TravelEveViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
